@@ -17,7 +17,7 @@ const java = new mongoose.Schema({
 });
 const GoGo = new mongoose.model('GoGo', java);
 
-//init express app
+//init express app and bodyparser
 const app = express();
 app.use(
   bodyParser.urlencoded({
@@ -58,6 +58,7 @@ app.post('http://dummy.restapiexample.com/api/v1/create', function(request, resp
   });
 });
 
+//listen app on 9000 port
 app.listen(9000, () =>
   console.info(
     '==>🌎 Listening on port 3000. Open up http://localhost:9000/ in your browser 🎈🎈.'
